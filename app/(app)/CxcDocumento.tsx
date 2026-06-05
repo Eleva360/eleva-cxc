@@ -68,7 +68,7 @@ export default function CxcDocumento({
         )}
       </div>
 
-      <div className="mt-4">
+      <div className="mt-8">
         <p className="font-bold">Formas de pago: Transferencia bancaria</p>
         <p>Banco: {interno.banco}</p>
         <p>Tipo de Cuenta: {interno.tipo_cuenta}</p>
