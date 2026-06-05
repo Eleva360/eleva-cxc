@@ -261,8 +261,8 @@ function CxcDocumento({
       id="cxc-print"
       className="bg-white shadow-lg rounded-lg p-8 text-sm text-slate-800 font-serif leading-relaxed"
     >
-      <div className="space-y-0.5">
-        <p className="font-bold text-base">{interno.nombre}</p>
+      <div className="text-xs leading-tight">
+        <p className="font-bold">{interno.nombre}</p>
         <p>NIT/C.C. {Number(interno.cedula).toLocaleString("es-CO")}</p>
         <p>{interno.responsable_iva ? "Responsable de IVA" : "No Responsable de IVA"}</p>
         <p>Dirección: {interno.direccion}</p>

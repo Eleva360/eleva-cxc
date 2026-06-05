@@ -11,6 +11,12 @@ body {
   color: #1e293b;
 }
 
+/* Documento CXC: serif limpia con números parejos (lining figures) */
+#cxc-print {
+  font-family: "Times New Roman", "Liberation Serif", "DejaVu Serif", serif;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
 /* Impresión: solo el documento CXC, oculta toda la interfaz */
 @media print {
   body * {
