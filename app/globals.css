@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Impresión: solo el documento CXC, oculta toda la interfaz */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #cxc-print,
+  #cxc-print * {
+    visibility: visible;
+  }
+  #cxc-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 24px 32px !important;
+  }
+  @page {
+    size: letter;
+    margin: 1.2cm;
+  }
+}
