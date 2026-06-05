@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileText, User, Building2, Briefcase } from "lucide-react";
+import { FileText, User, Building2, Briefcase, History } from "lucide-react";
 import { logout } from "../actions";
 
 const tabs = [
   { href: "/generar", label: "Generar CXC", icon: FileText },
+  { href: "/historial", label: "Historial", icon: History },
   { href: "/perfil", label: "Mi perfil", icon: User },
   { href: "/clientes", label: "Clientes", icon: Building2 },
   { href: "/servicios", label: "Servicios", icon: Briefcase },

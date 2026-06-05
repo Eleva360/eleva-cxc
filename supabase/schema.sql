@@ -20,6 +20,7 @@ create table if not exists internos (
   titular_cuenta text not null default '',
   profesion text not null default '',
   declarante_renta boolean not null default false,
+  es_admin boolean not null default false,
   consecutivo integer not null default 1,
   created_at timestamptz not null default now()
 );
@@ -74,17 +75,17 @@ alter table cuentas_cobro  enable row level security;
 -- ============================================================
 insert into internos (nombre, cedula, prefijo, direccion, ciudad, celular, email,
                       banco, tipo_cuenta, numero_cuenta, titular_cuenta, profesion,
-                      declarante_renta, consecutivo)
+                      declarante_renta, es_admin, consecutivo)
 values
   ('ODAIR JOSE GUZMAN PARRA', '1235044301', 'EO', 'Olaya Herrera Kr 52B #38A-51',
    'Medellín', '3104606834', 'odaguzman99@gmail.com', 'Bancolombia', 'Ahorros',
-   '787-000031-30', 'Odair Jose Guzman Parra', 'Contador Público', false, 1),
+   '787-000031-30', 'Odair Jose Guzman Parra', 'Contador Público', false, true, 1),
   ('PAOLA RIVERA RUEDA', '21482705', 'EP', '', 'Cartagena', '', '',
-   '', 'Ahorros', '', 'Paola Rivera Rueda', '', false, 1),
+   '', 'Ahorros', '', 'Paola Rivera Rueda', '', false, false, 1),
   ('KATERINE BALLESTAS ALVAREZ', '1007120952', 'EK', '', 'Cartagena', '', '',
-   '', 'Ahorros', '', 'Katerine Ballestas Alvarez', '', false, 1),
+   '', 'Ahorros', '', 'Katerine Ballestas Alvarez', '', false, false, 1),
   ('ANGIE SIMANCAS LARA', '1148948498', 'EA', '', 'Cartagena', '', '',
-   '', 'Ahorros', '', 'Angie Simancas Lara', '', false, 1)
+   '', 'Ahorros', '', 'Angie Simancas Lara', '', false, false, 1)
 on conflict (cedula) do nothing;
 
 insert into clientes (razon_social, nit, direccion, ciudad)

@@ -14,6 +14,7 @@ export type Interno = {
   titular_cuenta: string;
   profesion: string;
   declarante_renta: boolean;
+  es_admin: boolean;
   consecutivo: number;
   created_at?: string;
 };
